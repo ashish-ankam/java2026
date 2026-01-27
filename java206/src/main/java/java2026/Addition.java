@@ -1,4 +1,4 @@
-package java206;
+package java2026;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,19 +8,16 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 
-public class Add extends GenericServlet {
+public class Addition extends GenericServlet {
 
 	@Override
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h2> Hello Add Servlet </h2>");
-		out.println("</body>");
-		out.println("</html>");
-		
+		 long num1 = Long.parseLong(request.getParameter("number1"));
+		 long num2 = Long.parseLong(request.getParameter("number2"));
+		 
+		 PrintWriter out = response.getWriter();
+		 
+		 out.println("Addition of Two Numbers is " + (num1+num2));
 
 	}
 
