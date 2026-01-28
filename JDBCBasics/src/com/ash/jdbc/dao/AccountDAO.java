@@ -9,7 +9,7 @@ public class AccountDAO {
 	            Connection con = DriverManager.getConnection(
 	                "jdbc:mysql://localhost:3306/world",
 	                "root",
-	                "Lulu@341"
+	                "*"
 	            );
 
 	            System.out.println("Database connected successfully");
