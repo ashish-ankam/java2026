@@ -2,8 +2,17 @@ package com.ash.jdbc.dao;
 
 class Telusko
 {
+	
+	static int cost1;
+	static String name1;
 	private String name;
 	private double cost;
+	
+	static {
+		cost1=100;
+		name1="Delhi";
+		//cost=200;
+	}
 	
 	Telusko()
 	{
