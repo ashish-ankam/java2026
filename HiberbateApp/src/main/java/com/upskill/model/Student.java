@@ -8,6 +8,16 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="StudentTable")
 public class Student {
+	
+	
+	public Student() {
+		System.out.println("Zero parameterised Constructor for Hibernate");
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", sName=" + sName + ", sAge=" + sAge + ", sCity=" + sCity + "]";
+	}
 
 	@Id
 	@Column(name="SID")
@@ -24,10 +34,10 @@ public class Student {
 	public void setsName(String sName) {
 		this.sName = sName;
 	}
-	public String getsAge() {
+	public Integer getsAge() {
 		return sAge;
 	}
-	public void setsAge(String sAge) {
+	public void setsAge(Integer sAge) {
 		this.sAge = sAge;
 	}
 	public String getsCity() {
@@ -40,7 +50,7 @@ public class Student {
 	@Column(name="SNAME")
 	private String sName;
 	@Column(name="SAGE")
-	private String sAge;
+	private Integer sAge;
 	@Column(name="SCITY")
 	private String sCity;
 }
