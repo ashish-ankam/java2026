@@ -22,13 +22,14 @@ public class LaunchUpdate {
     	  session = sessionFactory.openSession();
     	  transaction = session.beginTransaction();
     	  Student student = new Student();
-    	  student.setId(3);
-  		student.setsAge(24);
-  		student.setsCity("hyderabad");
-  		student.setsName("kohli");
+    	  student.setId(4);
+  		student.setsAge(25);
+  		student.setsCity("Telangana");
+  		student.setsName("Dhoni");
   		
   		//session.update(student);
-  	session.saveOrUpdate(student);
+  	//session.saveOrUpdate(student);
+  		session.merge(student);
   		
   		flag=true;
       }
