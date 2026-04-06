@@ -31,6 +31,14 @@ public class LaunchUpdate {
   	//session.saveOrUpdate(student);
   		session.merge(student);
   		
+  		/*
+  		session.delete(student);-> deprecated
+  		session.remove(student);->latest in place of delete
+        
+        session.save(student); -> deprecated
+        session.persist(student);->in place of save
+        */
+  		
   		flag=true;
       }
       catch(HibernateException e) {
